@@ -1,0 +1,113 @@
+#list-container {
+  padding: 20px;
+  margin: 0 auto;
+  max-width: 1200px;
+}
+
+header {
+  justify-content: center; /* Center horizontally */
+  align-items: flex-start; /* Align items at the top */
+  height: 10vh; /* Full height of the viewport */
+  padding-top: 5px; /* Optional: Add padding to provide space from the top */
+  text-align: center; /* Center text inside the header */
+}
+
+h1 {
+  margin: 0; /* Remove default margin */
+}
+
+.task-container {
+  display: flex;
+  align-items: center;
+  background-color: #fff;
+  border-radius: 5px;
+  margin-bottom: 15px;
+  padding: 10px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.description {
+  flex: 1;
+  padding: 8px;
+  border-radius: 5px;
+  border: none;
+  outline: none;
+}
+
+.description:not([readonly]) {
+  border: 2px solid rgb(237, 198, 198);
+}
+
+.completed-checkbox {
+  appearance: none;
+  width: 16px;
+  height: 16px;
+  border: 2px solid #4caf50;
+  border-radius: 3px;
+  cursor: pointer;
+  transition: background-color 0.3s, border-color 0.3s; /* Fixed typo here */
+}
+
+.completed-checkbox:checked {
+  background-color: #4caf50;
+}
+
+.edit-button,
+.delete-button {
+  color: white;
+  border: none;
+  padding: 8px 12px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.3s;
+  font-size: 14px;
+}
+
+.edit-button:hover,
+.delete-button:hover {
+  background-color: #4caf50;
+  transform: scale(1.05);
+}
+
+.edit-button {
+  background-color: #4caf50;
+}
+
+.delete-button {
+  margin-left: 5px;
+  background-color: rgb(240, 174, 174);
+}
+
+.task-container.completed {
+  /* Fixed typo here from "comleted" to "completed" */
+  opacity: 0.3;
+}
+
+.task-container.completed .description {
+  color: #999;
+}
+
+.timestamp {
+  font-size: 12px;
+  margin-right: 10px;
+}
+
+select {
+  padding: 8px;
+  border: 1px solid #ccc; /* Added missing semicolon */
+  border-radius: 5px;
+  background-color: #fff; /* Fixed typo here */
+  font-size: 14px;
+  cursor: pointer;
+  outline: none;
+}
+
+/* Hover effect */
+select:hover {
+  border-color: #4caf50;
+}
+
+/* Focus effect */
+select:focus {
+  border-color: #4caf50; /* Change border color */
+}
